@@ -149,7 +149,7 @@ export default {
           if (this.selectedFields.includes(subject.name)) {
             console.log(this.filteredList);
             console.log(Array.isArray(this.filteredlist));
-            this.filteredlist.push({
+            this.filteredList.push({
               name: teacher.name,
               subjects: [
                 {
