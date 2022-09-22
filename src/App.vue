@@ -1,5 +1,8 @@
-<template>
-  <section class="filter-controls">
+<template class="filter-controls">
+  <section class="subject-filter-controls">
+    <h2>
+      Subjects
+    </h2>
     <label>
       <input type="checkbox" value="Programmering" v-model="selectedFields" />
       Programmering
@@ -31,8 +34,57 @@
     <label>
       <input type="checkbox" value="Spanish" v-model="selectedFields" /> Spanish
     </label>
-    <button @click="filter()">Search</button>
+    <!-- <button @click="filter()">Search</button> -->
   </section>
+  <section class="year-filter-controls">
+    <h2>
+      Year:
+    </h2>
+    <label>
+      <input type="checkbox" value="" v-model="selectedFields" /> Spanish
+    </label>
+    <label>
+      <input type="checkbox" value="" v-model="selectedFields" /> Spanish
+    </label>
+    <label>
+      <input type="checkbox" value="" v-model="selectedFields" /> Spanish
+    </label>
+    <label>
+      <input type="checkbox" value="" v-model="selectedFields" /> Spanish
+    </label>
+    <label>
+      <input type="checkbox" value="" v-model="selectedFields" /> Spanish
+    </label>
+    <label>
+      <input type="checkbox" value="" v-model="selectedFields" /> Spanish
+    </label>
+    <label>
+      <input type="checkbox" value="" v-model="selectedFields" /> Spanish
+    </label>
+    <label>
+      <input type="checkbox" value="" v-model="selectedFields" /> Spanish
+    </label>
+
+  </section>
+  <!-- <section class= grade-filter-controls>
+    <label>
+      <input type="checkbox" value="Programmering" v-model="selectedFields" />
+      Programmering
+    </label>
+    <label>
+      <input type="checkbox" value="Programmering" v-model="selectedFields" />
+      Programmering
+    </label>
+    <label>
+      <input type="checkbox" value="Programmering" v-model="selectedFields" />
+      Programmering
+    </label>
+    <label>
+      <input type="checkbox" value="Programmering" v-model="selectedFields" />
+      Programmering
+    </label>
+
+  </section> -->
   <section>
     <div v-for="teacher in filteredList">
       <h2>{{ teacher.name }}</h2>
@@ -144,6 +196,7 @@ export default {
   },
   methods: {
     filter() {
+      this.filteredList = [];
       this.teachers.forEach((teacher) => {
         teacher.subjects.forEach((subject) => {
           if (this.selectedFields.includes(subject.name)) {
@@ -171,7 +224,20 @@ ul {
   list-style: none;
 }
 
-.filter-controls {
+.subject-filter-controls {
   margin: 10px;
+  display: grid;
+
+}
+
+.year-filter-controls {
+  margin: 10px;
+  display: grid;
+
+}
+
+.filter-controls {
+  display: grid;
+
 }
 </style>
