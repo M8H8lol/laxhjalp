@@ -87,25 +87,6 @@
     </section>
   </section>
 
-  <!-- <section class= grade-filter-controls>
-    <label>
-      <input type="checkbox" value="Programmering" v-model="selectedFields" />
-      Programmering
-    </label>
-    <label>
-      <input type="checkbox" value="Programmering" v-model="selectedFields" />
-      Programmering
-    </label>
-    <label>
-      <input type="checkbox" value="Programmering" v-model="selectedFields" />
-      Programmering
-    </label>
-    <label>
-      <input type="checkbox" value="Programmering" v-model="selectedFields" />
-      Programmering
-    </label>
-
-  </section> -->
   <button class="searchButton" @click="filter()">Search</button>
   <section class="teacherContainer">
     <div v-for="teacher in filteredList" class="teacher">
@@ -124,8 +105,8 @@
 export default {
   data() {
     return {
-      filteredList: [],
       selectedFields: [],
+      filteredList: [],
       teachers: [
         {
           name: "Sebastian Jensen",
