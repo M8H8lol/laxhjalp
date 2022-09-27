@@ -7,11 +7,7 @@
         Programmering
       </label>
       <label>
-        <input
-          type="checkbox"
-          value="Web-development"
-          v-model="selectedFields"
-        />
+        <input type="checkbox" value="Web-development" v-model="selectedFields" />
         Web-development
       </label>
       <label>
@@ -19,11 +15,7 @@
         Networking
       </label>
       <label>
-        <input
-          type="checkbox"
-          value="Diploma Project"
-          v-model="selectedFields"
-        />
+        <input type="checkbox" value="Diploma Project" v-model="selectedFields" />
         Diploma Project
       </label>
       <label>
@@ -186,14 +178,14 @@ export default {
               level: "First- to Sixth grade",
             },
           ],
-          years: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+          years: [1, 2, 3, 4, 5, 6],
         },
         {
           name: "Erina",
           subjects: [
             {
               name: "English",
-              level: "First- to Ninth grade",
+              level: "First- to Ninth grade"
             },
             {
               name: "Swedish",
